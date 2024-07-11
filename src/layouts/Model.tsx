@@ -34,11 +34,11 @@ export default defineComponent({
     controls.update();
 
     const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderPath('/gltf/');
+    dracoLoader.setDecoderPath(`${import.meta.env.BASE_URL}gltf/`);
 
     const gltfLoader = new GLTFLoader();
     gltfLoader.setDRACOLoader(dracoLoader);
-    gltfLoader.setPath('/AVIFTest/');
+    gltfLoader.setPath(`${import.meta.env.BASE_URL}AVIFTest/`);
     gltfLoader.load('forest_house.glb', function (gltf) {
       scene.add(gltf.scene);
       render();

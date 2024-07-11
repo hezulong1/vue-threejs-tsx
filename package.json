@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "vue-threejs-tsx",
   "private": true,
   "type": "module",
   "scripts": {
