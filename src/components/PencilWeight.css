@@ -1,0 +1,51 @@
+.PencilWeight {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  touch-action: none;
+  width: 200px;
+  height: 20px;
+}
+.PencilWeight[data-orientation='vertical'] {
+  flex-direction: column;
+  width: 20px;
+  height: 200px;
+}
+
+.PencilWeightTrack {
+  background-color: var(--black-a10);
+  position: relative;
+  flex-grow: 1;
+  border-radius: 9999px;
+  height: 3px;
+}
+.PencilWeightTrack[data-orientation='vertical'] {
+  width: 3px;
+}
+
+.PencilWeightRange {
+  position: absolute;
+  background-color: white;
+  border-radius: 9999px;
+  height: 100%;
+}
+
+.PencilWeightThumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  background-color: white;
+  box-shadow: 0 2px 10px var(--black-a7);
+  border-radius: 100px;
+}
+.PencilWeightThumb:hover {
+  background-color: var(--grass-3);
+}
+.PencilWeightThumb:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px var(--black-a8);
+}

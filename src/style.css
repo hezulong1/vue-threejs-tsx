@@ -1,0 +1,46 @@
+@import "vfonts/Inter.css";
+@import '@radix-ui/colors/white-alpha.css';
+@import '@radix-ui/colors/black-alpha.css';
+@import '@radix-ui/colors/grass.css';
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  font: 14px / 22px "v-sans", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  touch-action: none;
+  background-color: #f6eedc;
+}
+
+.dark body {
+  background-color: #44596c;
+}
+
+button {
+  all: unset;
+}
+
+.cursor-pencil {
+  cursor:
+    image-set(
+      url("./assets/pencil.png?build=18cbb6fb") 1x,
+      url("./assets/pencil@2x.png?build=18cbb6fb") 2x
+    ) 9 24,
+    url("./assets/pencil.cur?build=18cbb6fb") 9 24,
+    auto;
+}
+
+.cursor-eraser {
+  cursor:
+    image-set(
+      url("./assets/eraser.png?build=18cbb6fb") 1x,
+      url("./assets/eraser@2x.png?build=18cbb6fb") 2x
+    ) 12 23,
+    url("./assets/eraser.cur?build=18cbb6fb") 12 23,
+    auto;
+}

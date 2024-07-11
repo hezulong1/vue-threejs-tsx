@@ -1,0 +1,22 @@
+.Docker {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  background-color: var(--black-a3);
+  border-radius: 12px;
+  min-width: 72px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.Docker.centered {
+  justify-content: center;
+  padding: 12px 24px;
+}
+
+.dark .Docker {
+  background-color: var(--white-a5);
+}

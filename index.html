@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta name="theme-color" content="#f6eedc">
+  <title>ThreeJs+Vue</title>
+  <script>
+    ;(function () {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('3d-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+  </script>
+  <script type="importmap">
+    {"imports": {
+      "three": "https://unpkg.com/three/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three/examples/jsm/",
+      "vue": "https://unpkg.com/vue/dist/vue.esm-browser.prod.js"
+    }}
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="portal"></div>
+  <script type="module" src="src/main.ts"></script>
+</body>
+</html>

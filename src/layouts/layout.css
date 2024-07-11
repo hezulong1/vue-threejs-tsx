@@ -1,0 +1,152 @@
+/**
+ * Component
+ * -------------------------------------------------------------------------- */
+
+.IconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--black-a10);
+  transition: background-color 300ms;
+  text-decoration: none;
+  background-color: var(--black-a1);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+.IconButton:active {
+  background-color: var(--black-a2);
+}
+
+.IconButton > svg {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.dark .IconButton {
+  color: var(--white-a10);
+  background-color: var(--white-a5);
+}
+
+.dark .IconButton:active {
+  background-color: var(--white-a4);
+}
+
+.Util {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.UtilItem {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  transition: box-shadow 300ms ease-in-out;
+  box-sizing: border-box;
+}
+
+.UtilItem > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.UtilItem:focus {
+  position: relative;
+  box-shadow: 0 0 0 2px black;
+}
+
+.dark .UtilItem {
+  color: #fff;
+}
+
+.dark .UtilItem:focus {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/**
+ * Layout
+ * -------------------------------------------------------------------------- */
+.IconButton {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  z-index: 10;
+}
+
+.Docker {
+  position: absolute;
+}
+
+.Docker.left {
+  left: 24px;
+  bottom: 124px;
+}
+
+.Docker.bottom {
+  bottom: 24px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.Docker.left.bottom {
+  bottom: auto;
+  top: 24px;
+  gap: 12px;
+}
+
+.GridView {
+  position: absolute;
+  inset: 0;
+}
+
+.GridView.up {
+  z-index: 2;
+}
+
+.info {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+  font-family: monospace;
+}
+
+.info a {
+  color: #986b60;
+  text-decoration: none;
+}
+
+.dark .info {
+  color: var(--white-a7);
+}
+
+.dark .info a {
+  color: #fbb8a8;
+}
+
+.Dashboard {
+  width: 100%;
+  height: 100%;
+}

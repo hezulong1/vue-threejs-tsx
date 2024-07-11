@@ -1,0 +1,37 @@
+.PencilColor {
+  display: inline-flex;
+  gap: 8px;
+}
+.PencilColor[data-orientation='vertical'] {
+  flex-direction: column;
+}
+
+.PencilColorItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  transition: box-shadow 300ms ease-in-out;
+}
+.PencilColorItem > svg {
+  fill: #fff;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+.PencilColorItem[aria-label='White'] > svg,
+.PencilColorItem[aria-label='Yellow'] > svg {
+  fill: #000;
+}
+.PencilColorItem:focus {
+  position: relative;
+  box-shadow: 0 0 0 2px #000;
+}
+.PencilColorItem[data-active='true'] > svg {
+  opacity: 1;
+}
+
+.dark .PencilColorItem:focus {
+  box-shadow: 0 0 0 2px #fff;
+}

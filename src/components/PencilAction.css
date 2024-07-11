@@ -1,0 +1,39 @@
+.PencilAction {
+  display: inline-flex;
+  gap: 16px;
+}
+
+.PencilActionItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+  box-sizing: border-box;
+}
+.PencilActionItem[aria-pressed='true'] {
+  background-color: var(--grass-4);
+}
+.PencilActionItem > svg {
+  width: 20px;
+  height: 20px;
+}
+.PencilActionItem:focus {
+  position: relative;
+  box-shadow: 0 0 0 2px black;
+}
+
+.dark .PencilActionItem {
+  color: #fff;
+}
+
+.dark .PencilActionItem[aria-pressed='true'] {
+  background-color: var(--white-a4);
+}
+
+.dark .PencilActionItem:focus {
+  box-shadow: 0 0 0 2px #fff;
+}
