@@ -1,6 +1,5 @@
-import { useBreakpoints, useDark, useToggle } from '@vueuse/core';
-import VConsole from 'vconsole';
 import { computed, ref, watch } from 'vue';
+import { useBreakpoints, useDark, useToggle } from '@vueuse/core';
 
 const breakpoints = useBreakpoints({ mobile: 0, tablet: 768 });
 
