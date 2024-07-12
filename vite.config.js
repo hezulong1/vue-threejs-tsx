@@ -5,12 +5,12 @@ export default defineConfig(({ command }) => {
   const isDev = command === 'serve';
 
   return {
-    base: '/vue-threejs-tsx/',
+    base: isDev ? '/' : '/vue-threejs-tsx/',
     plugins: [
       vueJsx(),
     ],
     build: {
-      minify: false,
+      minify: true,
       rollupOptions: {
         external: [
           'vue',

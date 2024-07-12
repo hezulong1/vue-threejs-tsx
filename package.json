@@ -14,6 +14,7 @@
     "@vueuse/core": "^10.11.0",
     "radix-vue": "^1.9.0",
     "three": "^0.166.1",
+    "vconsole": "^3.15.1",
     "vue": "^3.4.31"
   },
   "devDependencies": {

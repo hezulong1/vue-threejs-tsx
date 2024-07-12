@@ -6,7 +6,7 @@ import Close from './layouts/Close';
 import Util, { type UtilType } from './layouts/Util';
 import './layouts/layout.css';
 import Locale from './layouts/Locale';
-import { isMobile, toggleDark } from './composables';
+import { isMobile, setupVConsole, toggleDark } from './composables';
 
 export default defineComponent({
   name: 'App',
@@ -16,6 +16,9 @@ export default defineComponent({
       renderMask: false,
       openToast: '',
     };
+  },
+  mounted() {
+    setupVConsole();
   },
   methods: {
     onDidAction(type: UtilType, lock?: boolean) {

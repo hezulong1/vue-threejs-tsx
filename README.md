@@ -6,4 +6,3 @@ A Template with
 + Vue3
 + ThreeJS
 + tsx
-
